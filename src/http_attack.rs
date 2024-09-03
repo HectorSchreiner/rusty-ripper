@@ -33,14 +33,8 @@ async fn file_to_string(file_path: &Path) -> Result<String, Box<dyn Error>> {
 pub async fn http_post_attack(url: &str, wordlist_path: &Path, username: &str) -> Result<(), Box<dyn Error>> {
     let client = Client::new();
     let wordlist = wordlist_to_vec(wordlist_path).await?;
-
-
     let logger = Logger::new();
     let progress_bar = ProgressBar::new(wordlist.len() as u64);
-
-    let mut error_count = 0;
-    let mut warning_count = 0;
-    let mut success_count = 0; 
     let mut progress = 0;
 
     progress_bar.set_style(
