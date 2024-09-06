@@ -2,6 +2,7 @@ use std::{error::Error, path::Path};
 
 mod components;
 mod http_attack;
+mod cli;
 
 use http_attack::http_post_attack;
 
