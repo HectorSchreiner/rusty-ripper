@@ -28,3 +28,4 @@ async fn run(cli: &Cli) -> Result<(), Box<dyn Error>> {
     }
     Ok(())
 }
+

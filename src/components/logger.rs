@@ -106,3 +106,18 @@ pub enum OutputMode {
     Default,
     Result,
 }
+
+pub fn logo() {
+    let logo = "
+    ██████╗ ██╗██████╗ ██████╗ ██████╗ 
+    ██╔══██╗██║██╔══██╗██╔══██╗██╔══██╗
+    ██████╔╝██║██████╔╝██████╔╝██████╔╝
+    ██╔══██╗██║██╔═══╝ ██╔═══╝ ██╔══██╗
+    ██║  ██║██║██║     ██║     ██║  ██║
+    ╚═╝  ╚═╝╚═╝╚═╝     ╚═╝     ╚═╝  ╚═╝";
+    execute!(
+        stdout(),
+        Print(format!("{}", logo)),
+        Print(format!("\nTool created by: Hackerbo\n"))
+    ).unwrap();    
+}
